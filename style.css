@@ -1,0 +1,49 @@
+body{
+    background-image: url('phone 2.webp');
+    background-size: cover;
+}
+.sidebar{
+  /* background-color: rgb(92, 92, 85);
+    height: 50px;
+    width: 475px;
+height: 733px;
+flex-shrink: 0;
+background: url('phorm.webp') lightgray 50% / cover no-repeat;
+transform: scaleX(-1);
+*/
+width: 250px;
+background: url('phorm.webp') no-repeat center center;
+background-size: cover;
+padding: 20px;
+
+}
+.sidebar button{
+/*    width: 255.183px;
+height: 63.319px;
+flex-shrink: 0;
+border-radius: 20px 0px 0px 20px;
+background: #CCCBCB;
+*/
+display: block;
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+background-color: #f0f0f0;
+border: none;
+cursor: pointer;
+font-size: 16px;
+}
+
+#btn_1{
+    transform: scaleX(1);
+}
+
+.box_2{
+    background-color: #bfa580;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+  }
