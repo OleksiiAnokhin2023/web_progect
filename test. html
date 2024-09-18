@@ -1,0 +1,38 @@
+
+<div class="container">
+    <!-- Розділ озброєння -->
+    <section id="equipment" class="filter-section">
+        <h2>Фільтрація озброєння</h2>
+        <div>
+            <select id="weapon-type">
+                <option value="">Виберіть тип озброєння</option>
+                <option value="tanks">Танки</option>
+                <option value="aviation">Авіація</option>
+                <option value="infantry">Піхота</option>
+            </select>
+
+            <select id="year">
+                <option value="">Виберіть рік введення</option>
+                <option value="2020">2020</option>
+                <option value="2010">2010</option>
+                <option value="2000">2000</option>
+            </select>
+
+            <select id="status">
+                <option value="">Виберіть статус</option>
+                <option value="active">Активне</option>
+                <option value="reserve">Резерв</option>
+            </select>
+        </div>
+
+        <div class="results" id="results">
+            <!-- Результати фільтрації будуть тут -->
+        </div>
+    </section>
+
+    <!-- Розділ карти -->
+    <section id="map" class="map-section">
+        <h2>Карта військових об'єктів</h2>
+        <img src="map-image.jpg" alt="Карта військових об'єктів США" class="map">
+    </section>
+</div> 
