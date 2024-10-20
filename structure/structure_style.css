@@ -1,3 +1,7 @@
+body{
+  overflow: auto;
+}
+
 .list{
     font-size: 20px;
     line-height: 2;
@@ -9,5 +13,16 @@
 
 
  margin: 0;
-
+ margin-bottom: 10px;
   }
+
+  .clicked_elemnt.hide{
+    opacity: 0;
+  }
+  .hide{
+    opacity: 0;
+  }
+.add_content{
+  font-size: 20px;
+  line-height: 2;
+}

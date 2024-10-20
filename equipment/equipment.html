@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="equipment_style.css">
+    <title>Військова Спроможність Армії США</title>
+</head>
+<body>
+    <header>
+        <h1>Військова Спроможність Армії США</h1>
+    </header>
+    <main>
+    <nav>
+        <a href="/index.html">Головна</a>
+        <a href="structure/structure.html">Структура Армії</a>
+        <a href="equipment.html">Озброєння</a>  
+        <a href="history/history.html">Історія Армії</a>
+        <a href="#map">Карта</a>
+    </nav>
+    <table>
+        <tr>
+            <th>Модель</th>
+            <th>тип</th>
+            <th>дальнобойность</th>
+            <th>точность</th>
+            <th>дополнительное снаряжение</th>
+            <th>начало експлоутации</th>
+        </tr>
+        <tr>
+            <td>M4 Carbine</td>
+            <td>Карабин</td>
+            <td>500-600 метров (эффективная)</td>
+            <td>Высокая на коротких и средних дистанциях</td>
+            <td>Оптические прицелы, глушитель, подствольный гранатомет M203, лазерные целеуказатели</td>
+            <td>1994 год</td>
+        </tr>
+        <tr>
+            <td>M16A4 Rifle</td>
+            <td>Автоматическая винтовка</td>
+            <td>550 метров (эффективная)</td>
+            <td>Высокая на средних и дальних дистанциях</td>
+            <td>Оптические прицелы ACOG, лазерные целеуказатели, глушитель</td>
+            <td>1997 год</td>
+        </tr>
+        <tr>
+            <td>M249 SAW (Squad Automatic Weapon)</td>
+            <td>Легкий пулемет</td>
+            <td>800 метров (эффективная)</td>
+            <td>Средняя</td>
+            <td>Оптический прицел, лазерные целеуказатели, складной сошник</td>
+            <td>1984 год</td>
+        </tr>
+        <tr>
+            <td>M2010 Enhanced Sniper Rifle</td>
+            <td>Снайперская винтовка</td>
+            <td>1200 метров (эффективная)</td>
+            <td>Очень высокая</td>
+            <td>Оптический прицел, глушитель ,  сошник</td>
+            <td>2010 год</td>
+        </tr>
+        <tr>
+            <td>M2010 Enhanced Sniper Rifle</td>
+            <td>Снайперская винтовка</td>
+            <td>1200 метров (эффективная)</td>
+            <td>Очень высокая</td>
+            <td>Оптический прицел, глушитель, сошник</td>
+            <td>2010 год</td>
+        </tr>
+    </table>
+    </main>
+    <footer>
+        © 2024 Військова Спроможність Армії США
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Простий приклад фільтрації озброєння
+        const weaponTypeSelect = document.getElementById('weapon-type');
+        const yearSelect = document.getElementById('year');
+        const statusSelect = document.getElementById('status');
+        const resultsDiv = document.getElementById('results');
+
+        function filterWeapons() {
+            const weaponType = weaponTypeSelect.value;
+            const year = yearSelect.value;
+            const status = statusSelect.value;
+
+            // Можна додати логіку фільтрації
+            resultsDiv.innerHTML = `
+                <p>Тип: ${weaponType || 'Всі'}</p>
+                <p>Рік: ${year || 'Всі'}</p>
+                <p>Статус: ${status || 'Всі'}</p>
+            `;
+        }
+
+        weaponTypeSelect.addEventListener('change', filterWeapons);
+        yearSelect.addEventListener('change', filterWeapons);
+        statusSelect.addEventListener('change', filterWeapons);
+    });
+</script>
+</body>
+</html>

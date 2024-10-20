@@ -1,84 +1,75 @@
+"use strict";
 // Переменная для хранения исходного HTML-контента блока 'list'
-let originalListContent: string = '';
-
+let originalListContent = '';
 const elements = document.getElementsByClassName('clicked_elemnt');
 Array.from(elements).forEach(element => {
     element.addEventListener('click', (event) => {
-        const target = event.target as HTMLElement;
-
+        const target = event.target;
         // Найдем div с классом 'list' и удалим его с помощью remove()
-        const listDiv = document.getElementsByClassName('list')[0] as HTMLElement;
+        const listDiv = document.getElementsByClassName('list')[0];
         if (listDiv) {
             console.log('Найден блок с классом "list":', listDiv);
-
             // Сохраняем исходное содержимое блока 'list'
             if (!originalListContent) {
-                originalListContent = listDiv.outerHTML;  // Сохраняем полный HTML-блок
+                originalListContent = listDiv.outerHTML; // Сохраняем полный HTML-блок
             }
-
             listDiv.remove(); // Удаляем блок 'list'
-        } else {
+        }
+        else {
             console.error('Не удалось найти блок с классом "list"');
         }
-
         // Вызовем функцию для генерации контента и удалим нажатый элемент
         const content = list_elements(target.id);
         if (content) {
             // Создаем новый div для контента
             const newDiv = document.createElement('div');
             newDiv.className = 'add_content';
-            const contentSection = document.querySelector('section.content') as HTMLElement;
+            const contentSection = document.querySelector('section.content');
             newDiv.innerHTML = content; // Заполняем div сгенерированным контентом
             console.log('Добавляем новый блок с контентом:', content);
             contentSection.appendChild(newDiv); // Добавляем новый div в конец документа
-
             // Добавляем обработчик клика на сгенерированный <h1>
             const generatedH1 = newDiv.querySelector('h1');
             if (generatedH1) {
                 generatedH1.addEventListener('click', () => {
                     // Удаляем весь новый div, а не только <h1>
                     newDiv.remove();
-
                     // Восстанавливаем блок 'list'
                     const newListDiv = document.createElement('div');
-                    newListDiv.className = 'list';  // Присваиваем класс 'list'
-                    newListDiv.innerHTML = originalListContent;  // Восстанавливаем контент
-
+                    newListDiv.className = 'list'; // Присваиваем класс 'list'
+                    newListDiv.innerHTML = originalListContent; // Восстанавливаем контент
                     // Теперь вставляем восстановленный div в элемент с классом 'content'
                     const contentSection = document.querySelector('section.content');
                     if (contentSection) {
-                        contentSection.appendChild(newListDiv);  // Добавляем его обратно в секцию
+                        contentSection.appendChild(newListDiv); // Добавляем его обратно в секцию
                         console.log('Блок "list" восстановлен внутри section.content');
                     }
-
                     // Повторно назначаем обработчики для элементов внутри восстановленного списка
                     reattachEventListeners(newListDiv);
                 });
             }
-
             // Удаляем элемент, по которому был клик
             target.remove();
-        } else {
+        }
+        else {
             console.error('Не удалось сгенерировать контент для элемента с id:', target.id);
         }
     });
 });
-
 // Функция для восстановления событий клика для элементов внутри блока 'list'
-function reattachEventListeners(listDiv: HTMLElement) {
+function reattachEventListeners(listDiv) {
     const elements = listDiv.getElementsByClassName('clicked_elemnt');
     Array.from(elements).forEach(element => {
         element.addEventListener('click', (event) => {
-            const target = event.target as HTMLElement;
+            const target = event.target;
             listDiv.remove(); // Скрываем блок 'list' снова
             const content = list_elements(target.id);
             try {
                 const newDiv = document.createElement('div');
                 newDiv.className = 'add_content';
-                const contentSection = document.querySelector('section.content') as HTMLElement;
+                const contentSection = document.querySelector('section.content');
                 newDiv.innerHTML = content;
                 contentSection.appendChild(newDiv);
-
                 const generatedH1 = newDiv.querySelector('h1');
                 if (generatedH1) {
                     generatedH1.addEventListener('click', () => {
@@ -86,26 +77,26 @@ function reattachEventListeners(listDiv: HTMLElement) {
                         const newListDiv = document.createElement('div');
                         newListDiv.className = 'list';
                         newListDiv.innerHTML = originalListContent;
-
                         // Восстанавливаем блок 'list' внутри section.content
                         const contentSection = document.querySelector('section.content');
                         if (contentSection) {
-                            contentSection.appendChild(newListDiv);  // Вставляем в правильное место
+                            contentSection.appendChild(newListDiv); // Вставляем в правильное место
                         }
-
-                        reattachEventListeners(newListDiv);  // Повторяем логику с обработчиками
+                        reattachEventListeners(newListDiv); // Повторяем логику с обработчиками
                     });
                 }
                 target.remove();
-            } catch{console.log("cannot find content")}
+            }
+            catch (_a) {
+                console.log("cannot find content");
+            }
         });
     });
 }
-
-function list_elements(list_id: string): string {
+function list_elements(list_id) {
     let content = '';
-    switch(list_id) {
-        case '1': 
+    switch (list_id) {
+        case '1':
             content = ` 
            <h1>Армия (Army)</h1>
 <p>Армия — это самое крупное тактическое и стратегическое формирование в вооружённых силах, включающее в себя несколько корпусов, а также различные специализированные подразделения поддержки. Армия может действовать как автономная стратегическая единица на широких театрах военных действий и решать масштабные задачи в координации с другими родами войск, такими как авиация и флот. Она обладает полной автономией для ведения боевых операций, поддержания тыла и обеспечения собственной логистики.</p>
@@ -160,7 +151,7 @@ function list_elements(list_id: string): string {
 </ul>
 `;
             break;
-        case '2': 
+        case '2':
             content = ` 
             <h1>Корпус (Corps)</h1>
 <p>Корпус — это крупное оперативное соединение в армии, состоящее из нескольких дивизий, а также специализированных подразделений поддержки. Корпус является основным элементом управления на оперативном уровне и может самостоятельно решать стратегические задачи в широком масштабе. Это более мощная и автономная единица по сравнению с дивизией, способная координировать боевые действия на больших территориях, поддерживать крупные операции и взаимодействовать с другими родами войск, такими как авиация и флот.</p>
@@ -212,7 +203,7 @@ function list_elements(list_id: string): string {
 </ul>
 `;
             break;
-        case '3': 
+        case '3':
             content = ` 
             <h1>Дивизия (Division)</h1>
 <p>Дивизия — это крупное тактическое и оперативное подразделение армии, более значительное по размерам и автономности, чем бригада. Она способна действовать самостоятельно, выполняя как стратегические, так и тактические задачи в широком диапазоне боевых операций. Дивизия включает различные роды войск, что делает её многопрофильной боевой единицей, способной эффективно решать задачи на поле боя и в операциях широкого масштаба.</p>
@@ -255,7 +246,7 @@ function list_elements(list_id: string): string {
 </ul>
 `;
             break;
-        case '4': 
+        case '4':
             content = ` 
             <h1>Бригада (Brigade)</h1>
 <p>Бригада — это крупное тактическое подразделение, более мощное и автономное, чем батальон, и часто способное действовать как самостоятельная единица в боевых операциях. Бригада является важным элементом управления на уровне между батальоном и дивизией. Она обладает достаточной огневой мощью, поддержкой и разнообразием ресурсов для выполнения широкого спектра задач на поле боя.</p>
@@ -296,7 +287,7 @@ function list_elements(list_id: string): string {
 </ul>
 `;
             break;
-        case '5': 
+        case '5':
             content = ` 
            <h1>Батальон (Battalion)</h1>
 <p>Батальон — это одно из основных тактических подразделений армии, более крупное и автономное, чем взвод или рота, но входящее в состав бригады. Батальон представляет собой гибкую боевую единицу, которая способна выполнять как самостоятельные задачи, так и участвовать в операциях совместно с другими подразделениями. Его численность, состав и функции делают его критически важным звеном в военной структуре.</p>
@@ -337,7 +328,7 @@ function list_elements(list_id: string): string {
 </ul>
 `;
             break;
-        case '6': 
+        case '6':
             content = ` 
            <h1>Рота (Company)</h1>
 <p>Рота — это боевое подразделение, более крупное, чем отделение или взвод, но при этом достаточно мобильное и автономное для выполнения самостоятельных тактических задач. Рота состоит из нескольких взводов и обычно подчиняется батальону. Рассмотрим структуру, задачи, тактику и взаимодействие роты с другими подразделениями в деталях.</p>
@@ -393,7 +384,7 @@ function list_elements(list_id: string): string {
 <p>Рота может вызывать артиллерийскую или воздушную поддержку для подавления огневых точек противника или для корректировки ударов по целям, которые находятся вне досягаемости роты.</p>
 `;
             break;
-        case '7': 
+        case '7':
             content = ` 
             <h1>Взвод (Platoon)</h1>
 <p>Взвод — это промежуточное тактическое подразделение, большее по размеру, чем отделение, но меньшее по сравнению с ротой. Взвод играет важную роль в боевых действиях, часто выполняя задачи как самостоятельно, так и в составе роты. Он обладает достаточной гибкостью для выполнения широкого спектра задач на тактическом уровне, таких как наступление, оборона, разведка и патрулирование.</p>
@@ -437,7 +428,7 @@ function list_elements(list_id: string): string {
 </ul>
 `;
             break;
-        case '8': 
+        case '8':
             content = ` 
             <h1>Отделение (Squad):</h1>
             <p>Отделение (squad) — это минимальная боевая единица в армии, обычно состоящая из 9-13 солдат, включая командира. Оно выполняет ключевые боевые и поддерживающие функции в составе взвода и является важным элементом на уровне тактики.</p>
@@ -570,34 +561,6 @@ function list_elements(list_id: string): string {
             console.error('Неизвестный id:', list_id);
             break;
     }
-
     console.log('Сгенерирован контент для элемента с id:', list_id, content); // Проверка, что контент сгенерирован
     return content;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
