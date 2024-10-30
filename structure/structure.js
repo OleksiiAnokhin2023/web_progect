@@ -5,7 +5,7 @@ const elements = document.getElementsByClassName('clicked_elemnt');
 Array.from(elements).forEach(element => {
     element.addEventListener('click', (event) => {
         const target = event.target;
-        // Найдем div с классом 'list' и удалим его с помощью remove()
+        // Найдем div с классом 'list' и удалим его
         const listDiv = document.getElementsByClassName('list')[0];
         if (listDiv) {
             console.log('Найден блок с классом "list":', listDiv);
@@ -13,7 +13,7 @@ Array.from(elements).forEach(element => {
             if (!originalListContent) {
                 originalListContent = listDiv.outerHTML; // Сохраняем полный HTML-блок
             }
-            listDiv.remove(); // Удаляем блок 'list'
+            listDiv.remove();
         }
         else {
             console.error('Не удалось найти блок с классом "list"');
@@ -80,7 +80,7 @@ function reattachEventListeners(listDiv) {
                         // Восстанавливаем блок 'list' внутри section.content
                         const contentSection = document.querySelector('section.content');
                         if (contentSection) {
-                            contentSection.appendChild(newListDiv); // Вставляем в правильное место
+                            contentSection.appendChild(newListDiv);
                         }
                         reattachEventListeners(newListDiv); // Повторяем логику с обработчиками
                     });
@@ -561,6 +561,6 @@ function list_elements(list_id) {
             console.error('Неизвестный id:', list_id);
             break;
     }
-    console.log('Сгенерирован контент для элемента с id:', list_id, content); // Проверка, что контент сгенерирован
+    console.log('Сгенерирован контент для элемента с id:', list_id, content);
     return content;
 }

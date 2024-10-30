@@ -2,6 +2,10 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    display: block;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: auto;
   }
   
   td, th {
@@ -13,3 +17,120 @@ table {
   tr:nth-child(even) {
     background-color: #ddd;
   }
+
+  .tabl_div{
+    width: 1500px;
+    margin: 5px;
+    margin-bottom: 30px;
+    padding: 10px;
+    align-items: center;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  select {
+    margin: 10px;
+}
+img{
+  width: 200px;
+  cursor: pointer;
+}
+
+
+#image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#modal-image {
+width: 70%;
+max-height:90% ;
+}
+
+#close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+  .tabl_div {
+      width: 100%;
+      overflow-x: auto;
+      margin: 5px 0;
+      padding: 5px;
+      max-width: 100vw;
+      box-sizing: border-box;
+  }
+  
+  table {
+      font-size: 0.8em;
+      max-width: 100vw;
+      display: block;
+  }
+    th, td {
+      padding: 5px;
+      white-space: wrap;
+    }
+  img {
+      width: 150px;
+  }
+
+  #modal-image {
+      width: 90%;
+      max-height: 80%;
+  }
+
+  select {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      font-size: 0.9em;
+  }
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tabl_div {
+    width: 100%;
+    
+    margin: 5px 0;
+    padding: 5px;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  table {
+    width: 100%;
+      font-size: 0.9em;
+      display: block;
+      max-width: 100vw;
+      box-sizing: border-box;
+      overflow-x: auto;
+  }
+  th, td {
+    padding: 5px;
+    white-space: wrap;
+  }
+
+  img {
+      width: 180px;
+  }
+
+  #modal-image {
+      width: 80%;
+      max-height: 85%;
+  }
+}

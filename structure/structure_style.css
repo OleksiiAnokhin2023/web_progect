@@ -7,22 +7,68 @@ body{
     line-height: 2;
 }
 .content {
- 
-    padding: 20px;
-
-
-
+padding: 20px;
  margin: 0;
  margin-bottom: 10px;
   }
 
-  .clicked_elemnt.hide{
-    opacity: 0;
-  }
-  .hide{
-    opacity: 0;
-  }
 .add_content{
   font-size: 20px;
   line-height: 2;
+}
+.clicked_elemnt{
+  cursor: pointer;
+}
+.add_content h1{
+  cursor: pointer;
+}
+
+/* Мобильная версия */
+@media (max-width: 767px) {
+  .content {
+      padding: 10px;
+      font-size: 0.9em;
+  }
+
+  .list {
+      font-size: 0.85em;
+      line-height: 1.6;
+  }
+
+  .add_content {
+      font-size: 0.85em;
+  }
+
+  h1 {
+      font-size: 1.3em;
+  }
+
+  ol, ul {
+      padding-left: 20px;
+  }
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content {
+      padding: 15px;
+      font-size: 1em;
+  }
+
+  .list {
+      font-size: 0.95em;
+      line-height: 1.8;
+  }
+
+  .add_content {
+      font-size: 1em;
+  }
+
+  h1 {
+      font-size: 1.6em;
+  }
+
+  ol, ul {
+      padding-left: 25px;
+  }
 }

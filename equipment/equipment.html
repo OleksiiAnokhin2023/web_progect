@@ -14,90 +14,686 @@
     <main>
     <nav>
         <a href="/index.html">Головна</a>
-        <a href="structure/structure.html">Структура Армії</a>
+        <a href="/structure/structure.html">Структура Армії</a>
         <a href="equipment.html">Озброєння</a>  
-        <a href="history/history.html">Історія Армії</a>
-        <a href="#map">Карта</a>
+        <a href="/history/history.html">Історія Армії</a>
     </nav>
-    <table>
-        <tr>
-            <th>Модель</th>
-            <th>тип</th>
-            <th>дальнобойность</th>
-            <th>точность</th>
-            <th>дополнительное снаряжение</th>
-            <th>начало експлоутации</th>
-        </tr>
-        <tr>
-            <td>M4 Carbine</td>
-            <td>Карабин</td>
-            <td>500-600 метров (эффективная)</td>
-            <td>Высокая на коротких и средних дистанциях</td>
-            <td>Оптические прицелы, глушитель, подствольный гранатомет M203, лазерные целеуказатели</td>
-            <td>1994 год</td>
-        </tr>
-        <tr>
-            <td>M16A4 Rifle</td>
-            <td>Автоматическая винтовка</td>
-            <td>550 метров (эффективная)</td>
-            <td>Высокая на средних и дальних дистанциях</td>
-            <td>Оптические прицелы ACOG, лазерные целеуказатели, глушитель</td>
-            <td>1997 год</td>
-        </tr>
-        <tr>
-            <td>M249 SAW (Squad Automatic Weapon)</td>
-            <td>Легкий пулемет</td>
-            <td>800 метров (эффективная)</td>
-            <td>Средняя</td>
-            <td>Оптический прицел, лазерные целеуказатели, складной сошник</td>
-            <td>1984 год</td>
-        </tr>
-        <tr>
-            <td>M2010 Enhanced Sniper Rifle</td>
-            <td>Снайперская винтовка</td>
-            <td>1200 метров (эффективная)</td>
-            <td>Очень высокая</td>
-            <td>Оптический прицел, глушитель ,  сошник</td>
-            <td>2010 год</td>
-        </tr>
-        <tr>
-            <td>M2010 Enhanced Sniper Rifle</td>
-            <td>Снайперская винтовка</td>
-            <td>1200 метров (эффективная)</td>
-            <td>Очень высокая</td>
-            <td>Оптический прицел, глушитель, сошник</td>
-            <td>2010 год</td>
-        </tr>
-    </table>
+    <select id="weapon-type">
+        <option value="">Виберіть тип озброєння</option>
+        <option value="infantry">Піхота</option>
+        <option value="tanks">Танки</option>
+        <option value="altilery">Артилерия</option>
+        <option value="aviation">Авіація</option>
+        
+    </select>
+    
+    <div id="infantry-table" class="tabl_div">
+        <table>
+            <thead>
+                <tr>
+                    <th>Модель</th>
+                    <th>Тип</th>
+                    <th>Дальнобойность</th>
+                    <th>Точность</th>
+                    <th>Дополнительное снаряжение</th>
+                    <th>Начало эксплуатации</th>
+                    <th>Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>M4 Carbine</td>
+                    <td>Карабин</td>
+                    <td>500-600 метров (эффективная)</td>
+                    <td>Высокая на коротких и средних дистанциях</td>
+                    <td>Оптические прицелы, глушитель, подствольный гранатомет M203, лазерные целеуказатели</td>
+                    <td>1994 год</td>
+                    <td><img src="imgs/M4 Carbine.png" alt="M4 Carbine"></td>
+                </tr>
+                <tr>
+                    <td>M16A4 Rifle</td>
+                    <td>Автоматическая винтовка</td>
+                    <td>550 метров (эффективная)</td>
+                    <td>Высокая на средних и дальних дистанциях</td>
+                    <td>Оптические прицелы ACOG, лазерные целеуказатели, глушитель</td>
+                    <td>1997 год</td>
+                    <td><img src="imgs/M16A4 Rifle.png" alt="M16A4 Rifle"></td>
+                </tr>
+                <tr>
+                    <td>M249 SAW (Squad Automatic Weapon)</td>
+                    <td>Легкий пулемет</td>
+                    <td>800 метров (эффективная)</td>
+                    <td>Средняя</td>
+                    <td>Оптический прицел, лазерные целеуказатели, складной сошник</td>
+                    <td>1984 год</td>
+                    <td><img src="imgs/M249 SAW.png" alt="M249 SAW"></td>
+                </tr>
+                <tr>
+                    <td>M2010 Enhanced Sniper Rifle</td>
+                    <td>Снайперская винтовка</td>
+                    <td>1200 метров (эффективная)</td>
+                    <td>Очень высокая</td>
+                    <td>Оптический прицел, глушитель ,  сошник</td>
+                    <td>2010 год</td>
+                    <td><img src="imgs/M2010 Enhanced Sniper Rifle.png" alt="M2010 Enhanced Sniper Rifle"></td>
+                </tr>
+                <tr>
+                    <td>M107 Barrett</td>
+                    <td>Антиматериальная снайперская винтовка</td>
+                    <td>1800 метров (эффективная)</td>
+                    <td>Высокая для дальних дистанций</td>
+                    <td>Оптический прицел, сошник, глушитель</td>
+                    <td>2002 год</td>
+                    <td><img src="imgs/M107 Barrett.png" alt="M107 Barrett"></td>
+                </tr>
+                <tr>
+                    <td>M9 Pistol</td>
+                    <td>Пистолет</td>
+                    <td>50 метров (эффективная)</td>
+                    <td>Средняя</td>
+                    <td>Тактический фонарик, лазерный указатель</td>
+                    <td>1985 год</td>
+                    <td><img src="imgs/M9 Pistol.png" alt="M9 Pistol"></td>
+                </tr>
+                <tr>
+                    <td>M17 (SIG Sauer P320)</td>
+                    <td>Пистолет</td>
+                    <td>50 метров (эффективная)</td>
+                    <td>Высокая</td>
+                    <td>Тактический фонарик, лазерный указатель</td>
+                    <td>2017 год</td>
+                    <td><img src="imgs/M17 (SIG Sauer P320).png" alt="M17 (SIG Sauer P320)"></td>
+                </tr>
+                <tr>
+                    <td>M240B Machine Gun</td>
+                    <td>Универсальный пулемет</td>
+                    <td>800 метров (эффективная для пехотных целей)</td>
+                    <td>Высокая на средних дистанциях</td>
+                    <td>Сошник, оптический прицел</td>
+                    <td>1977 год (в армии США с 1990-х)</td>
+                    <td><img src="imgs/M240B Machine Gun.png" alt="M240B Machine Gun"></td>
+                </tr>
+                <tr>
+                    <td>M2 Browning</td>
+                    <td>Тяжелый пулемет</td>
+                    <td>1800 метров (эффективная)</td>
+                    <td>Средняя</td>
+                    <td>Тренога, оптические прицелы для повышения точности на больших дистанциях</td>
+                    <td>1933 год</td>
+                    <td><img src="imgs/M2 Browning.png" alt="M2 Browning"></td>
+                </tr>
+                <tr>
+                    <td>Mk 19 Grenade Launcher</td>
+                    <td>Автоматический гранатомет</td>
+                    <td>1500 метров (эффективная)</td>
+                    <td>Высокая по площадям</td>
+                    <td>Оптический прицел</td>
+                    <td>1983 год</td>
+                    <td><img src="imgs/Mk 19 Grenade Launcher.png" alt="Mk 19 Grenade Launcher"></td>
+                </tr>
+                <tr>
+                    <td>M27 Infantry Automatic Rifle (IAR)</td>
+                    <td>Автоматическая винтовка</td>
+                    <td>550 метров (эффективная)</td>
+                    <td>Очень высокая</td>
+                    <td>Оптический прицел, сошник</td>
+                    <td>2011 год</td>
+                    <td><img src="imgs/M27 Infantry Automatic Rifle.png" alt="M27 Infantry Automatic Rifle"></td>
+                </tr>
+                <tr>
+                    <td>M110 Semi-Automatic Sniper System (SASS)</td>
+                    <td>Полуавтоматическая снайперская винтовка</td>
+                    <td>800 метров (эффективная)</td>
+                    <td>Высокая</td>
+                    <td>Оптический прицел, глушитель</td>
+                    <td>2008 год</td>
+                    <td><img src="imgs/M110 Semi-Automatic Sniper System.png" alt="M110 Semi-Automatic Sniper System"></td>
+                </tr>
+                <tr>
+                    <td>M1014 (Benelli M4)</td>
+                    <td>Дробовик</td>
+                    <td>До 40 метров</td>
+                    <td>Средняя на ближних дистанциях</td>
+                    <td>Оптический прицел, приклад, глушитель</td>
+                    <td>1999 год</td>
+                    <td><img src="imgs/M1014.png" alt="M1014"></td>
+                </tr>
+                <tr>
+                    <td>XM2010 (Bolt-action Sniper Rifle)</td>
+                    <td>Снайперская винтовка (болтового типа)</td>
+                    <td>1200 метров</td>
+                    <td>Очень высокая</td>
+                    <td>Оптический прицел, глушитель, сошник</td>
+                    <td>2011 год</td>
+                    <td><img src="imgs/XM2010.png" alt="XM2010"></td>
+                </tr>
+                <tr>
+                    <td>FN SCAR (Special Operations Forces Combat Assault Rifle)</td>
+                    <td>Штурмовая винтовка</td>
+                    <td>600 метров (SCAR-L), 800 метров (SCAR-H)</td>
+                    <td>Высокая</td>
+                    <td>Оптические прицелы, глушитель, подствольный гранатомет</td>
+                    <td>2009 год</td>
+                    <td><img src="imgs/FN SCAR.png" alt="FN SCAR"></td>
+                </tr>
+                <tr>
+                    <td>FN M249 PARA (Para SAW)</td>
+                    <td>Легкий пулемет</td>
+                    <td>600 метров (эффективная)</td>
+                    <td>Средняя</td>
+                    <td>Складной приклад, сошник</td>
+                    <td>1984 год (обновленная версия для парашютных войск)</td>
+                    <td><img src="imgs/FN M249 PARA.png" alt="FN M249 PARA"></td>
+                </tr>
+                <tr>
+                    <td>MP5 (Heckler & Koch)</td>
+                    <td>Пистолет-пулемет</td>
+                    <td>200 метров (эффективная)</td>
+                    <td>Высокая</td>
+                    <td>Глушитель, тактический фонарик</td>
+                    <td>1966 год (широко используется специальными подразделениями)</td>
+                    <td><img src="imgs/MP5.png" alt="MP5"></td>
+                </tr>
+                <tr>
+                    <td>M203 Grenade Launcher</td>
+                    <td>Подствольный гранатомет</td>
+                    <td>150 метров (эффективная)</td>
+                    <td>Средняя (по площадям)</td>
+                    <td>Может быть установлен на винтовку M16 или карабин M4</td>
+                    <td>1969 год</td>
+                    <td><img src="imgs/M203 Grenade Launcher.png" alt="M203 Grenade Launcher"></td>
+                </tr>
+                <tr>
+                    <td>Remington 870 Shotgun</td>
+                    <td>Помповый дробовик</td>
+                    <td>До 40 метров</td>
+                    <td>Средняя</td>
+                    <td>Тактический фонарик, лазерный указатель</td>
+                    <td>1950 год</td>
+                    <td><img src="imgs/Remington 870 Shotgun.png" alt="Remington 870 Shotgun"></td>
+                </tr>
+                <tr>
+                    <td>M26 Modular Accessory Shotgun System (MASS)</td>
+                    <td>Модульный дробовик</td>
+                    <td>До 40 метров</td>
+                    <td>Средняя</td>
+                    <td>Может быть установлен на винтовку M4 или использоваться как отдельное оружие</td>
+                    <td>2011 год</td>
+                    <td><img src="imgs/M26 Modular Accessory Shotgun System.png" alt="M26 Modular Accessory Shotgun System"></td>
+                </tr>
+                <tr>
+                    <td>HK416</td>
+                    <td>Штурмовая винтовка</td>
+                    <td>600 метров (эффективная)</td>
+                    <td>Очень высокая</td>
+                    <td>Оптические прицелы, глушитель, подствольный гранатомет</td>
+                    <td>2005 год (широко используется специальными подразделениями)</td>
+                    <td><img src="imgs/HK416.png" alt="HK416"></td>
+                </tr>
+                <tr>
+                    <td>FN Five-seveN</td>
+                    <td>Пистолет</td>
+                    <td>200 метров (эффективная)</td>
+                    <td>Высокая</td>
+                    <td>Лазерный указатель, тактический фонарик</td>
+                    <td>2000 год</td>
+                    <td><img src="imgs/FN Five-seveN.png" alt="FN Five-seveN"></td>
+                </tr>
+                <tr>
+                    <td>Mk 48 Mod 1</td>
+                    <td>Легкий пулемет</td>
+                    <td>800 метров (эффективная)</td>
+                    <td>Средняя</td>
+                    <td>Сошник, оптический прицел</td>
+                    <td>2003 год</td>
+                    <td><img src="imgs/Mk 48 Mod 1.png" alt="Mk 48 Mod 1"></td>
+                </tr>
+                <tr>
+                    <td>M320 Grenade Launcher</td>
+                    <td>Подствольный гранатомет</td>
+                    <td>150 метров (эффективная)</td>
+                    <td>Высокая по площадям</td>
+                    <td>Может использоваться как подствольный или отдельный гранатомет</td>
+                    <td>2009 год</td>
+                    <td><img src="imgs/M320 Grenade Launcher.png" alt="M320 Grenade Launcher"></td>
+                </tr>
+                <tr>
+                    <td>Next Generation Squad Weapon (NGSW)</td>
+                    <td>Штурмовая винтовка и легкий пулемет</td>
+                    <td>До 1000 метров</td>
+                    <td>Высокая</td>
+                    <td>Оптические прицелы, интеграция с системами управления огнем, глушители</td>
+                    <td>2025 год</td>
+                    <td><img src="imgs/NGSW.png" alt="Next Generation Squad Weapon"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="aviation-table" class="tabl_div" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Модель</th>
+                    <th>Тип</th>
+                    <th>Вооружение</th>
+                    <th>Описание</th>
+                    <th>Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>F-22 Raptor</td>
+                        <td>Истребитель превосходства в воздухе</td>
+                        <td>Пулемет 20 мм, управляемые ракеты AIM-9, AIM-120</td>
+                        <td>Истребитель с возможностью маневрирования на сверхзвуковых скоростях, обладает технологией малозаметности.</td>
+                        <td><img src="imgs/F-22 Raptor.png" alt="F-22 Raptor"></td>
+                    </tr>
+                    <tr>
+                        <td>F-15E Strike Eagle</td>
+                        <td>Истребитель-бомбардировщик</td>
+                        <td>Пулемет 20 мм, управляемые ракеты и бомбы</td>
+                        <td>Многоцелевой самолет для воздушных боев и нанесения точных ударов по наземным целям.</td>
+                        <td><img src="imgs/F-15E Strike Eagle.png" alt="F-15E Strike Eagle"></td>
+                    </tr>
+                    <tr>
+                        <td>F-16 Fighting Falcon</td>
+                        <td>Многоцелевой истребитель</td>
+                        <td>Пулемет 20 мм, ракеты AIM-9, бомбы</td>
+                        <td>Используется для борьбы с авиацией и нанесения ударов по наземным целям.</td>
+                        <td><img src="imgs/F-16 Fighting Falcon.png" alt="F-16 Fighting Falcon"></td>
+                    </tr>
+                    <tr>
+                        <td>F-35A Lightning II</td>
+                        <td>Стелс-истребитель пятого поколения</td>
+                        <td>Пулемет 25 мм, управляемые ракеты, бомбы</td>
+                        <td>Многоцелевой истребитель с технологией малозаметности для воздушных и ударных миссий.</td>
+                        <td><img src="imgs/F-35A Lightning II.png" alt="F-35A Lightning II"></td>
+                    </tr>
+                    <tr>
+                        <td>A-10 Thunderbolt II</td>
+                        <td>Штурмовик</td>
+                        <td>30-мм пушка GAU-8, ракеты Maverick, бомбы</td>
+                        <td>Самолет для непосредственной поддержки войск, имеет высокую защиту и маневренность.</td>
+                        <td><img src="imgs/A-10 Thunderbolt II.png" alt="A-10 Thunderbolt II"></td>
+                    </tr>
+                    <tr>
+                        <td>B-2 Spirit</td>
+                        <td>Стелс-бомбардировщик</td>
+                        <td>Бомбы B83, B61, управляемые JDAM</td>
+                        <td>Бомбардировщик со стелс-технологией для ударов по стратегическим целям в защищенных зонах противника.</td>
+                        <td><img src="imgs/B-2 Spirit.png" alt="B-2 Spirit"></td>
+                    </tr>
+                    <tr>
+                        <td>B-1B Lancer</td>
+                        <td>Сверхзвуковой стратегический бомбардировщик</td>
+                        <td>Бомбы свободного падения и управляемые JDAM</td>
+                        <td>Бомбардировщик для нанесения высокоточных ударов, может выполнять задачи на сверхзвуковых высотах.</td>
+                        <td><img src="imgs/B-1B Lancer.png" alt="B-1B Lancer"></td>
+                    </tr>
+                    <tr>
+                        <td>B-52 Stratofortress</td>
+                        <td>Стратегический бомбардировщик</td>
+                        <td>Управляемые и неуправляемые бомбы, крылатые ракеты</td>
+                        <td>Используется с 1950-х годов, способен нести различные типы оружия, включая атомные бомбы и крылатые ракеты.</td>
+                        <td><img src="imgs/B-52 Stratofortress.png" alt="B-52 Stratofortress"></td>
+                    </tr>
+                    <tr>
+                        <td>C-5M Super Galaxy</td>
+                        <td>Стратегический транспортный самолет</td>
+                        <td>Не вооружен</td>
+                        <td>Самый большой транспортный самолет армии США, грузоподъемность: до 127 тонн.</td>
+                        <td><img src="imgs/C-5M Super Galaxy.png" alt="C-5M Super Galaxy"></td>
+                    </tr>
+                    <tr>
+                        <td>C-17 Globemaster III</td>
+                        <td>Стратегический военно-транспортный самолет</td>
+                        <td>Не вооружен</td>
+                        <td>Основной самолет для перевозки тяжелых грузов на большие расстояния. Грузоподъемность: до 77,5 тонн.</td>
+                        <td><img src="imgs/C-17 Globemaster III.png" alt="C-17 Globemaster III"></td>
+                    </tr>
+                    <tr>
+                        <td>C-130 Hercules</td>
+                        <td>Транспортный самолет средней дальности</td>
+                        <td>Не вооружен</td>
+                        <td>Многоцелевой самолет для перевозки грузов и войск, применяется также для медицинской эвакуации. Грузоподъемность: до 20 тонн.</td>
+                        <td><img src="imgs/C-130 Hercules.png" alt="C-130 Hercules"></td>
+                    </tr>
+                    <tr>
+                        <td>KC-135 Stratotanker</td>
+                        <td>Самолет-заправщик</td>
+                        <td>Не вооружен</td>
+                        <td>Используется для дозаправки самолетов в воздухе, увеличивая дальность полета и время пребывания в воздухе.</td>
+                        <td><img src="imgs/KC-135 Stratotanker.png" alt="KC-135 Stratotanker"></td>
+                    </tr>
+                    <tr>
+                        <td>E-3 Sentry (AWACS)</td>
+                        <td>Самолет дальнего радиолокационного обнаружения и управления</td>
+                        <td>Не вооружен</td>
+                        <td>Обеспечивает радиолокационное наблюдение и управление воздушными операциями.</td>
+                        <td><img src="imgs/E-3 Sentry.png" alt="E-3 Sentry"></td>
+                    </tr>
+                    <tr>
+                        <td>E-8 Joint STARS</td>
+                        <td>Самолет разведки и управления</td>
+                        <td>Не вооружен</td>
+                        <td>Используется для разведки и управления наземными операциями, отслеживает цели на больших расстояниях.</td>
+                        <td><img src="imgs/E-8 Joint STARS.png" alt="E-8 Joint STARS"></td>
+                    </tr>
+                    <tr>
+                        <td>AC-130J Ghostrider</td>
+                        <td>Летающая батарея для огневой поддержки</td>
+                        <td>30-мм пушка, ракеты AGM-176 Griffin, управляемые бомбы</td>
+                        <td>Мощная платформа для огневой поддержки наземных операций, используется для уничтожения целей с воздуха.</td>
+                        <td><img src="imgs/AC-130J Ghostrider.png" alt="AC-130J Ghostrider"></td>
+                    </tr>
+                    <tr>
+                        <td>MC-130J Commando II</td>
+                        <td>Самолет для специальных операций</td>
+                        <td>Не вооружен</td>
+                        <td>Применяется для доставки бойцов специальных операций, их снабжения и эвакуации.</td>
+                        <td><img src="imgs/MC-130J Commando II.png" alt="MC-130J Commando II"></td>
+                    </tr>
+                    <tr>
+                        <td>AH-64 Apache</td>
+                        <td>Ударный вертолет</td>
+                        <td>30-мм пушка, ПТРК Hellfire, неуправляемые ракеты Hydra</td>
+                        <td>Основной ударный вертолет армии США, обладает высокой огневой мощью и маневренностью. Максимальная скорость: 293 км/ч.</td>
+                        <td><img src="imgs/AH-64 Apache.png" alt="AH-64 Apache"></td>
+                    </tr>
+                    <tr>
+                        <td>UH-60 Black Hawk</td>
+                        <td>Многоцелевой вертолет</td>
+                        <td>Пулеметы 7.62 мм или 12.7 мм</td>
+                        <td>Многоцелевой вертолет для транспортировки войск, эвакуации раненых и огневой поддержки. Максимальная скорость: 294 км/ч.</td>
+                        <td><img src="imgs/UH-60 Black Hawk.png" alt="UH-60 Black Hawk"></td>
+                    </tr>
+                    <tr>
+                        <td>CH-47 Chinook</td>
+                        <td>Транспортный вертолет</td>
+                        <td>Пулеметы 7.62 мм или 12.7 мм</td>
+                        <td>Тяжелый транспортный вертолет с возможностью перевозки грузов, техники и войск. Максимальная скорость: 315 км/ч.</td>
+                        <td><img src="imgs/CH-47 Chinook.png" alt="CH-47 Chinook"></td>
+                    </tr>
+                    <tr>
+                        <td>MH-6 Little Bird</td>
+                        <td>Легкий вертолет для специальных операций</td>
+                        <td>Пулеметы и ракеты</td>
+                        <td>Используется для быстрой доставки бойцов и разведки. Максимальная скорость: 282 км/ч.</td>
+                        <td><img src="imgs/MH-6 Little Bird.png" alt="MH-6 Little Bird"></td>
+                    </tr>
+                    <tr>
+                        <td>MQ-1C Gray Eagle</td>
+                        <td>Ударный и разведывательный БПЛА</td>
+                        <td>Ракеты Hellfire, бомбы</td>
+                        <td>Модернизированный беспилотник, используется для выполнения разведывательных и ударных операций.</td>
+                        <td><img src="imgs/MQ-1C Gray Eagle.png" alt="MQ-1C Gray Eagle"></td>
+                    </tr>
+                    <tr>
+                        <td>MQ-9 Reaper</td>
+                        <td>Тяжелый ударный БПЛА</td>
+                        <td>Ракеты Hellfire, бомбы JDAM</td>
+                        <td>Один из основных ударных беспилотников армии США для высокоточных ударов и разведки. Продолжительность полета: до 27 часов.</td>
+                        <td><img src="imgs/MQ-9 Reaper.png" alt="MQ-9 Reaper"></td>
+                    </tr>
+                    <tr>
+                        <td>RQ-4 Global Hawk</td>
+                        <td>Высотный стратегический разведывательный БПЛА</td>
+                        <td>Не вооружен</td>
+                        <td>Используется для стратегической разведки на больших высотах, способен выполнять миссии до 30 часов.</td>
+                        <td><img src="imgs/RQ-4 Global Hawk.png" alt="RQ-4 Global Hawk"></td>
+                    </tr>
+                    <tr>
+                        <td>RQ-7 Shadow</td>
+                        <td>Тактический БПЛА</td>
+                        <td>Не вооружен</td>
+                        <td>Тактический дрон для разведки и наблюдения на уровне батальона. Продолжительность полета: до 9 часов.</td>
+                        <td><img src="imgs/RQ-7 Shadow.png" alt="RQ-7 Shadow"></td>
+                    </tr>
+                    <tr>
+                        <td>RQ-11 Raven</td>
+                        <td>Легкий разведывательный БПЛА</td>
+                        <td>Не вооружен</td>
+                        <td>Используется для ближней разведки на поле боя. Продолжительность полета: до 90 минут.</td>
+                        <td><img src="imgs/RQ-11 Raven.png" alt="RQ-11 Raven"></td>
+                    </tr>
+                    <tr>
+                        <td>Switchblade</td>
+                        <td>Дрон-камикадзе</td>
+                        <td>Встроенная боевая часть</td>
+                        <td>Тактический дрон для точечного поражения легкобронированных целей.</td>
+                        <td><img src="imgs/Switchblade.png" alt="Switchblade" style="height: 200px;"></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="altilery-table" class="tabl_div" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Тип</th>
+                    <th>Вооружение</th>
+                    <th>Дальность стрельбы</th>
+                    <th>Описание</th>
+                    <th>Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Patriot</td>
+                    <td>Зенитно-ракетная система</td>
+                    <td>Ракеты MIM-104 Patriot</td>
+                    <td>До 160 км</td>
+                    <td>Высокомобильная система ПВО, предназначенная для защиты от ракет и авиации.</td>
+                    <td><img src="imgs/Patriot.png" alt="Patriot"></td>
+                  </tr>
+                  <tr>
+                    <td>THAAD (Terminal High Altitude Area Defense)</td>
+                    <td>Система противоракетной обороны</td>
+                    <td>Ракеты THAAD</td>
+                    <td>До 200 км</td>
+                    <td>Используется для перехвата баллистических ракет на больших высотах.</td>
+                    <td><img src="imgs/THAAD.png" alt="Terminal High Altitude Area Defense"></td>
+                  </tr>
+                  <tr>
+                    <td>Avenger</td>
+                    <td>Мобильная ПВО</td>
+                    <td>Ракеты Stinger, пулеметы 12.7 мм</td>
+                    <td>До 8 км (ракеты Stinger)</td>
+                    <td>Легкая мобильная система для защиты войск от авиации и беспилотников.</td>
+                    <td><img src="imgs/Avenger.png" alt="Avenger"></td>
+                  </tr>
+                  <tr>
+                    <td>C-RAM</td>
+                    <td>Система противодействия артиллерийским, ракетным и минометным обстрелам</td>
+                    <td>30-мм автоматическая пушка M61 Vulcan</td>
+                    <td>До 5 км</td>
+                    <td>Используется для перехвата снарядов и ракет на ближних дистанциях, защищая войска и базы.</td>
+                    <td><img src="imgs/C-RAM.png" alt="C-RAM"></td>
+                  </tr>
+                  <tr>
+                    <td>M109A7 Paladin</td>
+                    <td>Самоходная гаубица</td>
+                    <td>155 мм</td>
+                    <td>До 30 км</td>
+                    <td>Обеспечивает мобильную артиллерийскую поддержку на поле боя, одна из наиболее распространенных систем артиллерии в армии США.</td>
+                    <td><img src="imgs/M109A7 Paladin.png" alt="M109A7 Paladin"></td>
+                  </tr>
+                  <tr>
+                    <td>M777 Howitzer</td>
+                    <td>Легкая буксируемая гаубица</td>
+                    <td>155 мм</td>
+                    <td>До 40 км с активно-реактивными снарядами</td>
+                    <td>Легкая гаубица для мобильного огневого поражения, может транспортироваться вертолетами или грузовиками.</td>
+                    <td><img src="imgs/M777 Howitzer.png" alt="M777 Howitzer"></td>
+                  </tr>
+                  <tr>
+                    <td>M119A3</td>
+                    <td>Легкая буксируемая гаубица</td>
+                    <td>105 мм</td>
+                    <td>До 19 км</td>
+                    <td>Легкая гаубица, используемая для поддержки на уровне батальона.</td>
+                    <td><img src="imgs/M119A3.png" alt="M119A3"></td>
+                  </tr>
+                  <tr>
+                    <td>M142 HIMARS</td>
+                    <td>Высокомобильная реактивная система залпового огня</td>
+                    <td>Ракеты GMLRS и ATACMS</td>
+                    <td>До 300 км (с управляемыми ракетами)</td>
+                    <td>Высокомобильная система залпового огня, способная наносить точные удары на больших расстояниях, включая ракетные установки.</td>
+                    <td><img src="imgs/M142 HIMARS.png" alt="M142 HIMARS"></td>
+                  </tr>
+                  <tr>
+                    <td>M270 MLRS (Multiple Launch Rocket System)</td>
+                    <td>Реактивная система залпового огня</td>
+                    <td>Ракеты и снаряды разных типов (GMLRS, ATACMS)</td>
+                    <td>До 300 км</td>
+                    <td>Тяжелая ракетная установка для нанесения массированных ударов по противнику.</td>
+                    <td><img src="imgs/M270 MLRS.png" alt="Multiple Launch Rocket System"></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="tanks-table" class="tabl_div" style="display: none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Тип</th>
+                    <th>Вооружение</th>
+                    <th>Год введения</th>
+                    <th>Описание</th>
+                    <th>Фото</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>M1A2 Abrams</td>
+                    <td>Основной боевой танк</td>
+                    <td>120-мм гладкоствольная пушка, пулемет 7.62 мм и 12.7 мм</td>
+                    <td>1992</td>
+                    <td>Один из самых известных и мощных танков в мире, используется армией США как основной боевой танк, обладает высокой маневренностью и защитой. Максимальная скорость: 67 км/ч</td>
+                    <td><img src="imgs/M1A2 Abrams.png" alt="M1A2 Abrams"></td>
+                  </tr>
+                  <tr>
+                    <td>M1126 Stryker</td>
+                    <td>Колесный бронетранспортер</td>
+                    <td>Пулеметы 12.7 мм, гранатомет 40 мм</td>
+                    <td>2002</td>
+                    <td>Многофункциональная колесная бронемашина, может выполнять функции от перевозки войск до поддержки огнем. Максимальная скорость: 100 км/ч</td>
+                    <td><img src="imgs/M1126 Stryker.png" alt="M1126 Stryker"></td>
+                  </tr>
+                  <tr>
+                    <td>M2 Bradley</td>
+                    <td>Боевая машина пехоты (БМП)</td>
+                    <td>25-мм автоматическая пушка, ПТРК TOW, пулемет 7.62 мм</td>
+                    <td>1981</td>
+                    <td>БМП с высоким уровнем защиты и мощным вооружением, предназначена для транспортировки пехоты и поддержки танков. Максимальная скорость: 56 км/ч</td>
+                    <td><img src="imgs/M2 Bradley.png" alt="M2 Bradley"></td>
+                  </tr>
+                  <tr>
+                    <td>M3 Bradley</td>
+                    <td>Разведывательная боевая машина</td>
+                    <td>25-мм автоматическая пушка, ракеты TOW</td>
+                    <td>1981</td>
+                    <td>Используется для разведки и огневой поддержки в бою, разведывательная версия Bradley.</td>
+                    <td><img src="imgs/M3 Bradley.png" alt="M3 Bradley"></td>
+                  </tr>
+                  <tr>
+                    <td>M113 Armored Personnel Carrier</td>
+                    <td>Гусеничный бронетранспортер</td>
+                    <td>Пулеметы 12.7 мм</td>
+                    <td>1960</td>
+                    <td>Старый, но все еще активно используемый бронетранспортер для перевозки пехоты на поле боя.</td>
+                    <td><img src="imgs/M113 Armored Personnel Carrier.png" alt="M113 Armored Personnel Carrier"></td>
+                  </tr>
+                  <tr>
+                    <td>M88A2 Hercules</td>
+                    <td>Бронированная ремонтно-эвакуационная машина</td>
+                    <td>Не вооружен</td>
+                    <td>1997</td>
+                    <td>Используется для ремонта и эвакуации поврежденной тяжелой техники, включая танки Abrams.</td>
+                    <td><img src="imgs/M88A2 Hercules.png" alt="M88A2 Hercules"></td>
+                  </tr>
+                  <tr>
+                    <td>M104 Wolverine</td>
+                    <td>Танковый мостоукладчик</td>
+                    <td>Не вооружен</td>
+                    <td>2003</td>
+                    <td>Специализированная машина для установки мостов, позволяющая быстро перемещать технику через реки и препятствия.</td>
+                    <td><img src="imgs/M104 Wolverine.png" alt="M104 Wolverine"></td>
+                  </tr>
+                  <tr>
+                    <td>Buffalo A2</td>
+                    <td>Инженерная машина для разминирования</td>
+                    <td>Не вооружен</td>
+                    <td>2003</td>
+                    <td>Применяется для обнаружения и обезвреживания мин и взрывных устройств.</td>
+                    <td><img src="imgs/Buffalo A2.png" alt="Buffalo A2"></td>
+                  </tr>
+                  <tr>
+                    <td>Cougar MRAP</td>
+                    <td>Минозащищенный бронетранспортер</td>
+                    <td>Не вооружен</td>
+                    <td>2002</td>
+                    <td>Бронетранспортер с защитой от мин и самодельных взрывных устройств (СВУ), используется для безопасной транспортировки личного состава.</td>
+                    <td><img src="imgs/Cougar MRAP.png" alt="Cougar MRAP"></td>
+                  </tr>
+                  <tr>
+                    <td>M1 Assault Breacher Vehicle (ABV)</td>
+                    <td>Инженерная машина для разграждения</td>
+                    <td>Заряды разминирования, пулемет 12.7 мм</td>
+                    <td>2009</td>
+                    <td>Используется для расчистки минных полей и препятствий на пути наступающих сил.</td>
+                    <td><img src="imgs/M1 Assault Breacher Vehicle.png" alt="M1 Assault Breacher Vehicle"></td>
+                  </tr>
+                  <tr>
+                    <td>M1200 Armored Knight</td>
+                    <td>Бронированная разведывательная машина</td>
+                    <td>Пулемет 7.62 мм</td>
+                    <td>2008</td>
+                    <td>Используется для управления артиллерийским огнем и обнаружения целей.</td>
+                    <td><img src="imgs/M1200 Armored Knight.png" alt="M1200 Armored Knight"></td>
+                  </tr>
+                  <tr>
+                    <td>AAV-7 (Assault Amphibious Vehicle)</td>
+                    <td>Амфибийная боевая машина</td>
+                    <td>40-мм автоматический гранатомет и 12.7-мм пулемет</td>
+                    <td>1972</td>
+                    <td>Обеспечивает десантирование и перевозку морской пехоты на берег, поддерживая огнем. Максимальная скорость: 72 км/ч на суше, 13 км/ч на воде.</td>
+                    <td><img src="imgs/AAV-7.png" alt="Assault Amphibious Vehicle"></td>
+                  </tr>
+                  <tr>
+                    <td>HMMWV (Humvee)</td>
+                    <td>Легкий многоцелевой автомобиль</td>
+                    <td>Пулеметы 7.62 мм или 12.7 мм</td>
+                    <td>1984</td>
+                    <td>Высокомобильное транспортное средство, используемое для перевозки войск, вооружения и медицинской эвакуации. Максимальная скорость: 113 км/ч</td>
+                    <td><img src="imgs/HMMWV.png" alt="HMMWV (Humvee)"></td>
+                  </tr>
+                  <tr>
+                    <td>JLTV (Joint Light Tactical Vehicle)</td>
+                    <td>Легкий тактический автомобиль (замена Humvee)</td>
+                    <td>Варианты с пулеметами или ракетными системами</td>
+                    <td>2015</td>
+                    <td>Новейшая разработка для замены HMMWV, улучшенная защита и мобильность. Максимальная скорость: 120 км/ч</td>
+                    <td><img src="imgs/JLTV.png" alt="Joint Light Tactical Vehicle"></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="image-modal" style="display: none;">
+        <span id="close-modal">&times;</span>
+        <img id="modal-image" src="" alt="Enlarged Image">
+    </div>
+   
     </main>
     <footer>
         © 2024 Військова Спроможність Армії США
     </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Простий приклад фільтрації озброєння
-        const weaponTypeSelect = document.getElementById('weapon-type');
-        const yearSelect = document.getElementById('year');
-        const statusSelect = document.getElementById('status');
-        const resultsDiv = document.getElementById('results');
-
-        function filterWeapons() {
-            const weaponType = weaponTypeSelect.value;
-            const year = yearSelect.value;
-            const status = statusSelect.value;
-
-            // Можна додати логіку фільтрації
-            resultsDiv.innerHTML = `
-                <p>Тип: ${weaponType || 'Всі'}</p>
-                <p>Рік: ${year || 'Всі'}</p>
-                <p>Статус: ${status || 'Всі'}</p>
-            `;
-        }
-
-        weaponTypeSelect.addEventListener('change', filterWeapons);
-        yearSelect.addEventListener('change', filterWeapons);
-        statusSelect.addEventListener('change', filterWeapons);
-    });
-</script>
+<script src="equipment.js"></script>
 </body>
 </html>
